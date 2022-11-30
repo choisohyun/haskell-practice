@@ -1,0 +1,19 @@
+{
+  "name": "haskell-practice",
+  "version": "1.0.0",
+  "description": "하스켈로 배우는 함수형 프로그래밍",
+  "main": "index.js",
+  "scripts": {
+    "compile": "ghc practice/hello.hs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choisohyun/haskell-practice.git"
+  },
+  "author": "choisohyun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/choisohyun/haskell-practice/issues"
+  },
+  "homepage": "https://github.com/choisohyun/haskell-practice#readme"
+}
