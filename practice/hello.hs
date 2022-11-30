@@ -13,10 +13,10 @@ main = putStrLn myhtml
 -- 1번+2번: Separate the functionality of wrapHtml to two functions
 -- Change myhtml to use these two functions.
 
-html_ :: [Char] -> String
-html_ content = "<html>" <> content <> "</html>"
+html_ :: String -> String
+html_ = wrapHtml "html"
 body_ :: String -> String
-body_ content = "<body>" <> content <> "</body>"
+body_ = wrapHtml "body"
 -- myhtml :: [Char]
 -- myhtml = html_ (body_ "hello my world :)")
 
@@ -24,9 +24,9 @@ body_ content = "<body>" <> content <> "</body>"
 -- 3번: Add another two similar functions for the tags <head> and <title> and name them head_ and title_.
 
 title_ :: String -> String
-title_ content = "<title>" <> content <> "</title>"
+title_ = wrapHtml "title"
 head_ :: String -> String
-head_ content = "<head>" <> content <> "</head>"
+head_ = wrapHtml "head"
 
 
 -- 4번: Create a new function, makeHtml, which takes two strings as input:
@@ -39,8 +39,8 @@ myhtml :: [Char]
 myhtml = makeHtml "My page title" "My page content"
 
 
--- wrapTag :: * -> *
--- wrapTag tag content = "<" <> tag <> ">" <> content <> "</" <> tag <> ">"
+wrapTag :: String -> String -> String
+wrapTag tag content = "<" <> tag <> ">" <> content <> "</" <> tag <> ">"
 
 -- myhtml :: *
 -- myhtml = wrapTag "html" (wrapTag "body" "Hello, world!!!")
